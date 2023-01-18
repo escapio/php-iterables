@@ -4,8 +4,6 @@ namespace Escapio\Iterables;
 
 /**
  * Fluid interface to modify iterators
- *
- * @author bgr;
  */
 class Builder
 {

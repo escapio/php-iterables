@@ -9,8 +9,6 @@ namespace Escapio\Iterables;
  * WARNING: if keys are repeated within the same chunk, *items will be lost*.
  *
  * TODO: return generators instead of arrays als chunks to fix the problem.
- *
- * @author mcg
  */
 function chunk(iterable $iterable, int $chunk_size): \Generator
 {
@@ -39,8 +37,6 @@ function chunk(iterable $iterable, int $chunk_size): \Generator
  * them as they was just one.
  *
  * This one preserves keys.
- *
- * @author mcg
  */
 function merge(iterable $iterators): \Generator
 {
@@ -52,8 +48,6 @@ function merge(iterable $iterators): \Generator
 /**
  * Like merge() but source keys are ignored and
  * all items get a new incresing number key
- *
- * @author bgr
  */
 function mergeRenumbered(iterable $iterators): \Generator
 {
@@ -66,8 +60,6 @@ function mergeRenumbered(iterable $iterators): \Generator
 
 /**
  * Generates the cartesian product of the given N iterables.
- *
- * @author mcg
  */
 function multiply(iterable $first, iterable ...$iterators): iterable
 {
@@ -103,8 +95,6 @@ function multiply(iterable $first, iterable ...$iterators): iterable
 
 /**
  * Gives an iterator of items for which the callback returns true
- *
- * @author bgr
  */
 function filter(
     iterable $iterable,
@@ -121,8 +111,6 @@ function filter(
 /**
  * Gives an iterator of items which have been mapped by the
  * given callback
- *
- * @author bgr
  */
 function map(iterable $iterable, callable $map_callback): \Generator
 {
@@ -133,8 +121,6 @@ function map(iterable $iterable, callable $map_callback): \Generator
 
 /**
  * Iterates and calls given consumer for every item
- *
- * @author bgr
  */
 function loop(iterable $iterable, callable $consumer): void
 {

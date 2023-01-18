@@ -4,9 +4,6 @@ namespace Escapio\Iterables\Tests;
 
 use Escapio\Iterables\Builder;
 
-/**
- * @author bgr
- */
 class BuilderTest extends \Escapio\Iterables\Tests\TestCase
 {
     public function testMap()
