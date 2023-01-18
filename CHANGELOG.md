@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 <!--- END HEADER -->
 
+## [1.0.1](https://github.com/escapio/php-iterables/compare/v1.0.0...v1.0.1) (2023-01-18)
+
+### Bug Fixes
+
+* Keep composer.lock in sync ([1b73e0](https://github.com/escapio/php-iterables/commit/1b73e069a8a53627bcabc078df078bfe05491562))
+
+### Documentation
+
+* Add CHANGELOG manage description to README.md ([bd3a08](https://github.com/escapio/php-iterables/commit/bd3a08b4cb2ceedee805169479baf0f6142feba6))
+
+
+---
+
 ## [1.0.0](https://github.com/escapio/php-iterables/compare/0.0.0...v1.0.0) (2023-01-18)
 
 ### Features
