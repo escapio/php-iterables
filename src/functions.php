@@ -245,6 +245,18 @@ function getCounterCallback(int $start = 0): callable
     };
 }
 
+/**
+ * Interweaves multiple iterables.
+ *
+ * Iterates over the given iterables and yields the next element of each of them in a round-robin style.
+ * Once an iterable is empty it will be skipped.
+ * E.g: these iterables ["a", "b"] and [1, 2, 3] would result in an iterable with these elements:
+ * 0 => "a"
+ * 0 => 1
+ * 1 => "b"
+ * 1 => 2
+ * 2 => 3
+ */
 function interweave(iterable ...$iterables): iterable
 {
     $iterables = array_map(
@@ -299,6 +311,17 @@ function groupBy(iterable $iterable, callable $group_fn): iterable
     }
 }
 
+/**
+ * Group the items of an iterable by given group function.
+ * The grouped buckets are limited to given size.
+ *
+ * @param iterable $iterable the iterable which elements should be grouped
+ * @param int $size          the size of the buckets
+ * @param callable $group_fn the function which decides to which bucket an element belongs to: fn($item, $key): mixed
+ * @return iterable          with each element in the form of an array [GROUP_KEY, ARRAY_OF_ELEMENTS]
+ *                           where the GROUP_KEY is the result of $group_fn($item, $key).
+ *                           Because of the chunk size each group_key can occur several times in the result.
+ */
 function groupedChunk(
     iterable $iterable,
     int $size,

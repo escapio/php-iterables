@@ -63,46 +63,46 @@ class GroupByTest extends TestCase
     {
         yield "empty" => [[], 5, fn ($number) => $number % 3, []];
         yield "single value" => [
-            [23],
-            5,
-            fn ($number) => $number % 3,
-            [[2, [23]]],
+            "iterable" => [23],
+            "size" => 5,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [[2, [23]]],
         ];
         yield "all values of same type in separate chunks" => [
-            [2, 23],
-            1,
-            fn ($number) => $number % 3,
-            [[2, [2]], [2, [1 => 23]]],
+            "iterable" => [2, 23],
+            "size" => 1,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [[2, [2]], [2, [1 => 23]]],
         ];
         yield "all values of same type in same chunk" => [
-            [2, 23],
-            2,
-            fn ($number) => $number % 3,
-            [[2, [2, 23]]],
+            "iterable" => [2, 23],
+            "size" => 2,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [[2, [2, 23]]],
         ];
         yield "all values of same type in some chunks" => [
-            [2, 23, 32],
-            2,
-            fn ($number) => $number % 3,
-            [[2, [2, 23]], [2, [2 => 32]]],
+            "iterable" => [2, 23, 32],
+            "size" => 2,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [[2, [2, 23]], [2, [2 => 32]]],
         ];
         yield "all values of different types in separate chunks" => [
-            [1, 2, 3, 4],
-            1,
-            fn ($number) => $number % 3,
-            [[1, [1]], [2, [1 => 2]], [0, [2 => 3]], [1, [3 => 4]]],
+            "iterable" => [1, 2, 3, 4],
+            "size" => 1,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [[1, [1]], [2, [1 => 2]], [0, [2 => 3]], [1, [3 => 4]]],
         ];
         yield "all values of different types in some chunks" => [
-            [1, 2, 3, 4],
-            2,
-            fn ($number) => $number % 3,
-            [[1, [1, 3 => 4]], [2, [1 => 2]], [0, [2 => 3]]],
+            "iterable" => [1, 2, 3, 4],
+            "size" => 2,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [[1, [1, 3 => 4]], [2, [1 => 2]], [0, [2 => 3]]],
         ];
         yield "several types in several chunks" => [
-            [1, 2, 3, 4, 5, 6, 7, 8, 9],
-            2,
-            fn ($number) => $number % 3,
-            [
+            "iterable" => [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "size" => 2,
+            "group_fn" => fn ($number) => $number % 3,
+            "expected" => [
                 [1, [1, 3 => 4]],
                 [2, [1 => 2, 4 => 5]],
                 [0, [2 => 3, 5 => 6]],
