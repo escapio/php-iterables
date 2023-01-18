@@ -91,6 +91,15 @@ Also see the [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md).
 
 See [CHANGELOG.md](CHANGELOG.md)
 
+The changelog is managed by the composer package
+[marcocesarato/php-conventional-changelog](https://github.com/marcocesarato/php-conventional-changelog).
+There are some convenient scripts in the [composer.json](composer.json) file
+to update the CHANGELOG, bump the version and tag the commit:
+
+- composer release:patch
+- composer release:minor
+- composer release:major
+
 ## License
 
 PHP-Iterables is made available under the MIT License (MIT). Please see
