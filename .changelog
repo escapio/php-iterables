@@ -28,5 +28,6 @@ DESCRIPTION,
   'ignorePatterns' => [
     '/^chore\(release\):/i',
     '/^chore\(changelog\):/i',
-  ]
+  ],
+  'packageBump' => false,
 ];

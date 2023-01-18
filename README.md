@@ -94,7 +94,7 @@ See [CHANGELOG.md](CHANGELOG.md)
 The changelog is managed by the composer package
 [marcocesarato/php-conventional-changelog](https://github.com/marcocesarato/php-conventional-changelog).
 There are some convenient scripts in the [composer.json](composer.json) file
-to update the CHANGELOG, bump the version and tag the commit:
+to update the CHANGELOG and tag the commit with the current version:
 
 - composer release:patch
 - composer release:minor

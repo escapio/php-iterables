@@ -1,45 +1,44 @@
 {
-    "name": "escapio/php-iterables",
-    "description": "Utility functions for working with iterables",
-    "version": "1.0.1",
-    "minimum-stability": "stable",
-    "license": "MIT",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Escapio",
-            "email": "it@escapio.com"
-        }
-    ],
-    "scripts": {
-        "test": "phpunit",
-        "code-style:check": "vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix --format=txt --diff --dry-run --using-cache=no --verbose",
-        "code-style:fix": "vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix",
-        "changelog": "conventional-changelog",
-        "release": "conventional-changelog --commit",
-        "release:patch": "conventional-changelog --patch --commit",
-        "release:minor": "conventional-changelog --minor --commit",
-        "release:major": "conventional-changelog --major --commit"
-    },
-    "autoload": {
-        "psr-4": {
-            "Escapio\\Iterables\\": "src/"
-        },
-        "files": [
-            "src/functions.php"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Escapio\\Iterables\\Tests\\": "tests/"
-        }
-    },
-    "require": {
-        "php": "^8.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "9.5.27",
-        "friendsofphp/php-cs-fixer": "3.13.2",
-        "marcocesarato/php-conventional-changelog": "1.16.0"
+  "name": "escapio/php-iterables",
+  "description": "Utility functions for working with iterables",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Escapio",
+      "email": "it@escapio.com"
     }
+  ],
+  "scripts": {
+    "test": "phpunit",
+    "code-style:check": "vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix --format=txt --diff --dry-run --using-cache=no --verbose",
+    "code-style:fix": "vendor/bin/php-cs-fixer --config=.php-cs-fixer.dist.php fix",
+    "changelog": "conventional-changelog",
+    "release": "conventional-changelog --commit",
+    "release:patch": "conventional-changelog --patch --commit",
+    "release:minor": "conventional-changelog --minor --commit",
+    "release:major": "conventional-changelog --major --commit"
+  },
+  "autoload": {
+    "psr-4": {
+      "Escapio\\Iterables\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Escapio\\Iterables\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.5.27",
+    "friendsofphp/php-cs-fixer": "3.13.2",
+    "marcocesarato/php-conventional-changelog": "1.16.0"
+  }
 }
