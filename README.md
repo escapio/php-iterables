@@ -63,7 +63,7 @@ composer require escapio/php-iterables
 ## Contributing
 
 Feel free to create feature request or report bugs via
-[GitHub](https://github.com/escapio/php-iterables/issues/new).
+[GitHub](https://github.com/escapio/php-iterables/issues/new/choose).
 
 If you like to contribute, make sure that all tests and code style rules are
 satisfied, otherwise the CI will fail.
