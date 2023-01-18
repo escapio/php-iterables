@@ -1,0 +1,32 @@
+<?php
+
+return [
+  'headerDescription' => <<<DESCRIPTION
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+DESCRIPTION,
+  'preset' => [
+    // Breaking changes section
+    'breaking_changes' => ['label' => '⚠ BREAKING CHANGES', 'description' => 'Code changes that potentially causes other components to fail'],
+    // Types section
+    'feat'     => ['label' => 'Features', 'description' => 'New features'],
+    'perf'     => ['label' => 'Performance Improvements', 'description' => 'Code changes that improves performance'],
+    'fix'      => ['label' => 'Bug Fixes', 'description' => 'Bugs and issues resolution'],
+    'refactor' => ['label' => 'Code Refactoring', 'description' => 'A code change that neither fixes a bug nor adds a feature'],
+    'style'    => ['label' => 'Styles', 'description' => 'Changes that do not affect the meaning of the code'],
+    'test'     => ['label' => 'Tests', 'description' => 'Adding missing tests or correcting existing tests'],
+    'build'    => ['label' => 'Builds', 'description' => 'Changes that affect the build system or external dependencies '],
+    'ci'       => ['label' => 'Continuous Integrations', 'description' => 'Changes to CI configuration files and scripts'],
+    'docs'     => ['label' => 'Documentation', 'description' => 'Documentation changes'],
+    'chore'    => ['label' => 'Chores', 'description' => "Other changes that don't modify the source code or test files"],
+    'revert'   => ['label' => 'Reverts', 'description' => 'Reverts a previous commit'],
+  ],
+  'types' => ['feat', 'perf', 'fix', 'refactor', 'style', 'test', 'build', 'ci', 'docs', 'chore', 'revert'],
+  'ignoreTypes' => [],
+  'ignorePatterns' => [
+    '/^chore\(release\):/i',
+    '/^chore\(changelog\):/i',
+  ]
+];
