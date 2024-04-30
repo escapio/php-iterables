@@ -4,6 +4,8 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\multiply;
 
 class MultiplyTest extends TestCase
@@ -13,8 +15,8 @@ class MultiplyTest extends TestCase
      * When: the multiply function is called
      * Then: the cartesian product is returned
      *
-     * @dataProvider getMultiplyData
      */
+    #[DataProvider("getMultiplyData")]
     public function testMultiply(
         iterable $iterators,
         iterable $expected,
@@ -22,7 +24,7 @@ class MultiplyTest extends TestCase
         $this->assertEqualsIterable($expected, multiply(...$iterators));
     }
 
-    public function getMultiplyData(): iterable
+    public static function getMultiplyData(): iterable
     {
         yield "one dimension" => [
             "iterators" => [["a", "b"]],

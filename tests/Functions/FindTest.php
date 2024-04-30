@@ -4,11 +4,13 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\find;
 
 class FindTest extends TestCase
 {
-    /** @dataProvider getTestData */
+    #[DataProvider("getTestData")]
     public function testIteratorFind(iterable $iterable, ?int $expected)
     {
         $this->assertSame(
@@ -17,7 +19,7 @@ class FindTest extends TestCase
         );
     }
 
-    public function getTestData(): iterable
+    public static function getTestData(): iterable
     {
         yield "empty iterable" => [
             'iterable' => [],

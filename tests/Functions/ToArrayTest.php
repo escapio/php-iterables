@@ -4,19 +4,19 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\toArray;
 
 class ToArrayTest extends TestCase
 {
-    /**
-     * @dataProvider getToArrayData
-     */
+    #[DataProvider("getToArrayData")]
     public function testToArray(iterable $iterable): void
     {
         $this->assertEquals([1, 2, 3], toArray($iterable));
     }
 
-    public function getToArrayData(): iterable
+    public static function getToArrayData(): iterable
     {
         $generator = function (): iterable {
             yield 1;

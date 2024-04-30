@@ -4,17 +4,19 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\limit;
 
 class LimitTest extends TestCase
 {
-    /** @dataProvider getTestData */
+    #[DataProvider("getTestData")]
     public function testLimit(iterable $iterable, int $limit, iterable $expected)
     {
         $this->assertEqualsIterable($expected, limit($iterable, $limit));
     }
 
-    public function getTestData(): iterable
+    public static function getTestData(): iterable
     {
         yield "empty iterable" => [
             'iterable' => [],

@@ -4,20 +4,20 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\groupBy;
 use function Escapio\Iterables\groupedChunk;
 
 class GroupByTest extends TestCase
 {
-    /**
-     * @dataProvider getGroupByData
-     */
+    #[DataProvider("getGroupByData")]
     public function testGroupBy($iterable, $group_fn, $expected): void
     {
         $this->assertEqualsIterable($expected, groupBy($iterable, $group_fn));
     }
 
-    public function getGroupByData(): iterable
+    public static function getGroupByData(): iterable
     {
         yield "Empty array" => [
             "iterable" => [],
@@ -48,9 +48,7 @@ class GroupByTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider dataGroupedChunk
-     */
+    #[DataProvider("dataGroupedChunk")]
     public function testGroupedChunk($iterable, $size, $group_fn, $expected)
     {
         $this->assertEqualsIterable(
@@ -59,7 +57,7 @@ class GroupByTest extends TestCase
         );
     }
 
-    public function dataGroupedChunk(): iterable
+    public static function dataGroupedChunk(): iterable
     {
         yield "empty" => [[], 5, fn ($number) => $number % 3, []];
         yield "single value" => [

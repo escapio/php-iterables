@@ -4,6 +4,8 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\reindex;
 use function Escapio\Iterables\getCounterCallback;
 
@@ -25,9 +27,7 @@ class ReindexTest extends TestCase
         );
     }
 
-    /**
-     * @dataProvider getCounterCallbackData
-     */
+    #[DataProvider("getCounterCallbackData")]
     public function testGetCounterCallback(array $params, array $calls): void
     {
         $counter = getCounterCallback(...$params);
@@ -36,7 +36,7 @@ class ReindexTest extends TestCase
         }
     }
 
-    public function getCounterCallbackData(): iterable
+    public static function getCounterCallbackData(): iterable
     {
         yield "no initial argument" => [
             "params" => [],

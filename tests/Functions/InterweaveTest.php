@@ -4,19 +4,19 @@ namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+
 use function Escapio\Iterables\interweave;
 
 class InterweaveTest extends TestCase
 {
-    /**
-     * @dataProvider getInterweaveData
-     */
+    #[DataProvider("getInterweaveData")]
     public function testInterweave(array $iterables, iterable $expected): void
     {
         $this->assertEqualsIterable($expected, interweave(...$iterables));
     }
 
-    public function getInterweaveData(): iterable
+    public static function getInterweaveData(): iterable
     {
         yield "no arrays" => [
             "iterables" => [],
