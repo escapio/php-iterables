@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 <!--- END HEADER -->
 
+## [1.0.4](https://github.com/escapio/php-iterables/compare/v1.0.3...v1.0.4) (2024-04-30)
+
+### Bug Fixes
+
+* Downgrade symfony/console to satisfy PHP8.1 support ([7defd8](https://github.com/escapio/php-iterables/commit/7defd8a00c9b3bd764114406c44ee6f8492fe609))
+
+
+---
+
 ## [1.0.3](https://github.com/escapio/php-iterables/compare/v1.0.2...v1.0.3) (2024-04-30)
 
 ### Chores
