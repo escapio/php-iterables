@@ -128,4 +128,10 @@ class Builder
     {
         return reduce($this->iterable, $callback, $initial);
     }
+
+    /** @see \Escapio\Iterables\sum() */
+    public function sum(): mixed
+    {
+        return sum($this->iterable);
+    }
 }

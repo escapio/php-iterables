@@ -234,4 +234,13 @@ class BuilderTest extends \Escapio\Iterables\Tests\TestCase
 
         $this->assertEquals(6, $result);
     }
+
+    public function testSum(): void
+    {
+        $result = (new Builder())
+            ->from(new \ArrayIterator([1, 2, 3]))
+            ->sum();
+
+        $this->assertEquals(6, $result);
+    }
 }
