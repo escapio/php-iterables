@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 <!--- END HEADER -->
 
+## [2.2.0](https://github.com/escapio/php-iterables/compare/v2.1.0...v2.2.0) (2024-04-30)
+
+### Features
+
+* Add method `sum` to Builder ([63bc9c](https://github.com/escapio/php-iterables/commit/63bc9cf0e50f018428f444544acc5d1435df3e0e))
+
+
+---
+
 ## [2.1.0](https://github.com/escapio/php-iterables/compare/v2.0.0...v2.1.0) (2024-04-30)
 
 ### Bug Fixes
