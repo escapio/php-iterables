@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 <!--- END HEADER -->
 
+## [1.0.3](https://github.com/escapio/php-iterables/compare/v1.0.2...v1.0.3) (2024-04-30)
+
+### Chores
+
+* Update changelog tool ([e0c4a0](https://github.com/escapio/php-iterables/commit/e0c4a0bbd61488ffb2adc7fa61ff8d7652416c9f))
+* Update code style fixer ([2bdff7](https://github.com/escapio/php-iterables/commit/2bdff74c1df9d65438e2c3f6426ef5a7c1a690f7))
+* Update PHPUnit to v10.5.20 ([71b6ed](https://github.com/escapio/php-iterables/commit/71b6ed041b53667b76430ea6c24b15f771b1cca9))
+
+
+---
+
 ## [1.0.2](https://github.com/escapio/php-iterables/compare/v1.0.1...v1.0.2) (2023-01-18)
 
 ### Bug Fixes
