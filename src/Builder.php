@@ -23,7 +23,7 @@ class Builder
     }
 
     /** @see \Escapio\Iterables\filter() */
-    public function filter(callable $callback = null): self
+    public function filter(?callable $callback = null): self
     {
         $this->iterable = filter($this->iterable, $callback);
         return $this;
