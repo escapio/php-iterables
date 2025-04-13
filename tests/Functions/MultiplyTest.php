@@ -3,7 +3,6 @@
 namespace Escapio\Iterables\Tests\Functions;
 
 use Escapio\Iterables\Tests\TestCase;
-
 use PHPUnit\Framework\Attributes\DataProvider;
 
 use function Escapio\Iterables\multiply;
