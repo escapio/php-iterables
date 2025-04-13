@@ -7,6 +7,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 <!--- END HEADER -->
 
+## [2.2.1](https://github.com/escapio/php-iterables/compare/v2.2.0...v2.2.1) (2025-04-13)
+
+##### Deps-dev
+
+* Bump friendsofphp/php-cs-fixer from 3.59.3 to 3.75.0 ([2ac207](https://github.com/escapio/php-iterables/commit/2ac207540be16724b675c7d53e16cd2a1ec56e30))
+
+
+---
+
 ## [2.2.0](https://github.com/escapio/php-iterables/compare/v2.1.0...v2.2.0) (2024-04-30)
 
 ### Features
