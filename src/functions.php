@@ -98,7 +98,7 @@ function multiply(iterable $first, iterable ...$iterators): iterable
  */
 function filter(
     iterable $iterable,
-    callable $filter_callback = null,
+    ?callable $filter_callback = null,
 ): \Generator {
     $filter_callback = $filter_callback ?: fn ($thing) => $thing;
     foreach ($iterable as $key => $item) {
